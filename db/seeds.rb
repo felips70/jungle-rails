@@ -164,44 +164,112 @@ p12 = cat3.products.create!({
 p1.reviews.create!({
   product_id: 1,
   user_id: 1,
-  description: Faker::Hipster.paragraph(1),
+  description: Faker::Hipster.paragraph(3),
   rating:3
   })
 
 p1.reviews.create!({
   product_id: 1,
   user_id: 2,
-  description: Faker::Hipster.paragraph(1),
+  description: Faker::Hipster.paragraph(3),
   rating:4
   })
 
 p2.reviews.create!({
   product_id: 2,
   user_id: 1,
-  description: Faker::Hipster.paragraph(1),
+  description: Faker::Hipster.paragraph(3),
   rating:3
   })
 
 p2.reviews.create!({
   product_id: 2,
   user_id: 4,
-  description: Faker::Hipster.paragraph(1),
+  description: Faker::Hipster.paragraph(3),
   rating:3
   })
 
 p3.reviews.create!({
   product_id: 3,
   user_id: 3,
-  description: Faker::Hipster.paragraph(1),
+  description: Faker::Hipster.paragraph(3),
   rating:3
+  })
+
+p3.reviews.create!({
+  product_id: 3,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(3),
+  rating:4
   })
 
 p4.reviews.create!({
   product_id: 4,
   user_id: 3,
-  description: Faker::Hipster.paragraph(1),
+  description: Faker::Hipster.paragraph(3),
   rating:5
   })
 
+p4.reviews.create!({
+  product_id: 4,
+  user_id: 4,
+  description: Faker::Hipster.paragraph(3),
+  rating:1
+  })
 
+p5.reviews.create!({
+  product_id: 5,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(3),
+  rating:1
+  })
+
+p6.reviews.create!({
+  product_id: 6,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(3),
+  rating:2
+  })
+
+p7.reviews.create!({
+  product_id: 7,
+  user_id: 3,
+  description: Faker::Hipster.paragraph(3),
+  rating:3
+  })
+
+p8.reviews.create!({
+  product_id: 8,
+  user_id: 4,
+  description: Faker::Hipster.paragraph(3),
+  rating:1
+  })
+
+p9.reviews.create!({
+  product_id: 9,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(3),
+  rating:4
+  })
+
+p10.reviews.create!({
+  product_id: 10,
+  user_id: 3,
+  description: Faker::Hipster.paragraph(3),
+  rating:5
+  })
+
+p11.reviews.create!({
+  product_id:11,
+  user_id: 3,
+  description: Faker::Hipster.paragraph(3),
+  rating:3
+  })
+
+p12.reviews.create!({
+  product_id: 12,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(3),
+  rating:5
+  })
 puts "DONE!"
