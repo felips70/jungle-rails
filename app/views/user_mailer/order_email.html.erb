@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  <p>
+    Greatings dear costumer, <br>
+    Below you will find information about your order
+  </p>
+    <div>
+      <% @order.line_items.each do |item| %>
+        <%= render 'line_item', line_item: item %>
+      <% end %>
+    </div>
+  </body>
+</html>

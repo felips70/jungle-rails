@@ -1,0 +1,12 @@
+  <h3><%= line_item.product.name %></h3>
+  <div>
+    <%= image_tag line_item.product.image.tiny %>
+  </div>
+  <ul>
+    <li>
+      Quantity: <%= line_item.quantity %>
+    </li>
+    <li>
+      Price: <%= line_item.total_price %>
+    </li>
+  </ul>
