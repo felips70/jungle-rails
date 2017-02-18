@@ -26,7 +26,21 @@
     </div>
 
     <div class="row user-reviews">
-      <h2>User Reviews </h2>
+    <h3>Let us know what you think!</h3>
+      <%= form_for [@product, @review] do |f| %>
+        <div class="row">
+            <dl class="dl-horizontal">
+              <dt>Description</dt>
+              <dd><%= f.text_area :description %></dd>
+              <dt>Rating</dt>
+              <dd><%= f.select :rating, [[1, 1],[2, 2],[3, 3],[4, 4], [5, 5]] %></dd>
+              <dt></dt>
+              <dd><%= f.submit "Submit" %></dd>
+            </dl>
+        </div>
+      <% end %>
+
+      <h3>User Reviews </h3>
         <% @reviews.each do |review| %>
           <%= render 'review', review: review %>
         <% end %>
