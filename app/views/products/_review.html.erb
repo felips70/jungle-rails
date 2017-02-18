@@ -6,5 +6,14 @@
       <dd><%= review.description %></dd>
       <dt>Rating</dt>
       <dd><%= review.rating%>/5</dd>
+      <dt></dt>
+      <% if current_user.present?%>
+        <% if current_user.id == review.user.id %> <br>
+          <dd>
+          <%= link_to 'Delete', product_review_path(@product, review),
+                data: {:confirm => 'Are you sure?'}, :method => :delete %>
+          </dd>
+        <% end %>
+      <% end %>
     </dl>
 </div>
