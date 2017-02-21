@@ -8,7 +8,8 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/users'
+      redirect_to '/users/new', status: 400
+
     end
   end
 
