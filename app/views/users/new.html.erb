@@ -1,14 +1,14 @@
 <!-- app/views/users/new.html.erb -->
 
 <h1>Signup!</h1>
-
+<br>
 <%= form_for :user, url: '/users' do |f| %>
-
-  First Name: <%= f.text_field :first_name %>
-  Last Name: <%= f.text_field :last_name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-
+  <dl class="dl-horizontal">
+    <dt>First Name:</dt> <dd><%= f.text_field :first_name %></dd> <br>
+    <dt>Last Name:</dt> <dd><%= f.text_field :last_name %></dd> <br>
+    <dt>Email:</dt> <dd><%= f.text_field :email %></dd> <br>
+    <dt>Password:</dt> <dd><%= f.password_field :password %></dd> <br>
+    <dt>Confirm Password:</dt> <dd><%= f.password_field :password_confirmation %></dd> <br>
+    <dd><%= f.submit "Submit" %></dd>
+  </dl>
 <% end %>
