@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   describe 'Validations' do
-
     it 'if password_confirmation not present, user should not be created' do
       @user = User.create(
         email: 'test@example.com',
@@ -100,7 +99,32 @@ RSpec.describe User, type: :model do
       )
       expect(@user.save).to be false
     end
-
   end
 
+  describe '.authenticate_with_credentials' do
+    it "should authenticate users even if they have spaces before and/or after their email" do
+      @user = User.create(
+        email: 'test@example.com',
+        password: 'password',
+        password_confirmation: 'password',
+        first_name: 'name',
+        last_name: 'lastname'
+      )
+
+     user = User.authenticate_with_credentials(' test@example.com  ', @user.password)
+     expect(user.present?).to be true
+    end
+
+    it "should authenticate users even if they have varying case letters" do
+      @user = User.create(
+        email: 'teSt@exAMPLE.com',
+        password: 'password',
+        password_confirmation: 'password',
+        first_name: 'name',
+        last_name: 'lastname'
+      )
+     user = User.authenticate_with_credentials('Test@examPle.com', @user.password)
+     expect(user.present?).to be true
+    end
+  end
 end
