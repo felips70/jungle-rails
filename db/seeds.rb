@@ -27,28 +27,32 @@ u1 = User.create!({
   first_name: 'Jonny',
   last_name: 'Walker',
   email: 'jonny@jungle.com',
-  password: 'password'
+  password: 'password',
+  password_confirmation: 'password'
   })
 
 u2 = User.create!({
   first_name: 'Billy',
   last_name: 'Cordova',
   email: 'billy@jungle.com',
-  password: 'password'
+  password: 'password',
+  password_confirmation: 'password'
   })
 
 u3 = User.create!({
   first_name: 'Andres',
   last_name: 'Rojas',
   email: 'andres@jungle.com',
-  password: 'password'
+  password: 'password',
+  password_confirmation: 'password'
   })
 
 u4 = User.create!({
   first_name: 'Camila',
   last_name: 'Carbajal',
   email: 'camila@jungle.com',
-  password: 'password'
+  password: 'password',
+  password_confirmation: 'password'
   })
 
 
