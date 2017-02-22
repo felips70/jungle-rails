@@ -1,6 +1,4 @@
-class Admin::DashboardController < ApplicationController
-
-  USERNAME, PASSWORD = ENV['USERNAME'] , ENV['PASSWORD']
+class Admin::DashboardController < Admin::BaseController
 
   # Require authentication only for edit and delete operation
   before_filter :authenticate, :only => :show
