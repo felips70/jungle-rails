@@ -1,6 +1,5 @@
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < Admin::BaseController
 
-  USERNAME, PASSWORD = ENV['USERNAME'] , ENV['PASSWORD']
 
   # Require authentication only for edit and delete operation
   before_filter :authenticate, :only => [ :index, :new, :create ]

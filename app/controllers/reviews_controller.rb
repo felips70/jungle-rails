@@ -14,9 +14,11 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-     @product = Product.find(params[:product_id])
-     @product.reviews.find(params[:id]).destroy
-     redirect_to [@product]
+    @review = Review.find(params[:id])
+    @product = @review.product
+    # what happens here if the destroy fails?
+    @review.destroy
+    redirect_to [@product]
   end
 
 private
